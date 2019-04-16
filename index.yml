@@ -1,0 +1,9 @@
+lvmwakeup:
+  image: tardich/lvm2:0.1
+  command: vgchange -a y
+  privileged: true
+  net: host
+  uts: host
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.before: docker
